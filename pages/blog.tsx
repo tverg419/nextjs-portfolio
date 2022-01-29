@@ -1,18 +1,11 @@
 import { NextPage } from 'next'
-import internal from 'stream'
-import Article from '../components/Article.js'
+import ArticleList from '../components/ArticleList.js'
 
 const Blog: NextPage = ({ articles } ) => {
-    console.log(typeof articles)
+
     return (
         <div>
-            <ul>
-                {articles.map((a) => {
-                    return (
-                        <Article post={a}/>
-                    )
-                })}
-            </ul>
+            <ArticleList articles={articles}/>
         </div>
     )
 }
